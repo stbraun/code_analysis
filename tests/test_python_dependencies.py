@@ -15,6 +15,12 @@ def test_python_dependencies():
     assert 'code_analysis.python_dependencies' in result.output
     assert 'MERGE (n:Package' in result.output
     assert 'MERGE (m:Module' in result.output
+    assert 'MERGE (n)-[r:contains]->(m)' in result.output
+    assert 'MERGE (n)-[r:uses]->(m)' in result.output
+
+
+def test_help():
+    runner = CliRunner()
     help_result = runner.invoke(pyd.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output

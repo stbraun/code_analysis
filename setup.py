@@ -32,7 +32,7 @@ setup(
     description="Analyze source code dependencies and call trees in Neo4j.",
     entry_points={
         'console_scripts': [
-            'java_call_tree=code_analysis.java_call_tree:generate_with_statement',
+            'java_call_tree=code_analysis.java_call_tree:main',
             'java_dependencies=code_analysis.java_dependencies:main',
             'python_dependencies=code_analysis.python_dependencies:main',
         ],

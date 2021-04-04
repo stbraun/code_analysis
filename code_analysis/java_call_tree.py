@@ -1,5 +1,6 @@
 """ Parse static calltree and create call tree as Cypher statement. """
 
+import sys
 import click
 
 
@@ -82,8 +83,6 @@ def generate_method_relations(method_tuples):
     print("MERGE (n)-[r:calls]->(m)")
 
 
-@click.command()
-@click.argument("file_name")
 def generate_with_statement(file_name: str):
     with open(file_name, "r") as fd:
         class_tuples = []
@@ -109,5 +108,11 @@ def generate_with_statement(file_name: str):
         generate_method_relations(method_tuples)
 
 
+@click.command()
+@click.argument("file_name")
+def main(file_name):
+    generate_with_statement(file_name)
+
+
 if __name__ == '__main__':
-    generate_with_statement()  # pylint: disable=no-value-for-parameter
+    sys.exit(main())  # pylint: disable=no-value-for-parameter

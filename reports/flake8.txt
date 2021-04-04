@@ -1,0 +1,31 @@
+0.292      seconds elapsed
+313        total logical lines processed
+1070       logical lines processed per second
+431        total physical lines processed
+1474       physical lines processed per second
+2304       total tokens processed
+7881       tokens processed per second
+8          total files processed
+27         files processed per second
+code_analysis/java_call_tree.py:118:14: F821 undefined name 'ain'
+tests/test_java_call_tree.py:24:1: W293 blank line contains whitespace
+1     F821 undefined name 'ain'
+1     W293 blank line contains whitespace
+0.243      seconds elapsed
+328        total logical lines processed
+1348       logical lines processed per second
+452        total physical lines processed
+1857       physical lines processed per second
+2416       total tokens processed
+9930       tokens processed per second
+8          total files processed
+32         files processed per second
+0.234      seconds elapsed
+328        total logical lines processed
+1402       logical lines processed per second
+452        total physical lines processed
+1932       physical lines processed per second
+2416       total tokens processed
+10328      tokens processed per second
+8          total files processed
+34         files processed per second
