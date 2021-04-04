@@ -33,6 +33,7 @@ setup(
     entry_points={
         'console_scripts': [
             'java_call_tree=code_analysis.java_call_tree:generate_with_statement',
+            'java_dependencies=code_analysis.java_dependencies:main',
         ],
     },
     install_requires=requirements,

@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="com.corporation.compatibility.client">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.corporation.compatibility.pnuts">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.activity">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.compatibility.ui.objectbinderenhanced">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.apps.wip.ifc">
+            <Stats>
+                <TotalClasses>16</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>12</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>17</Ce>
+                <A>0.75</A>
+                <I>0.94</I>
+                <D>0.69</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="IHousingCleaningService.java">
+                    com.company.abc.apps.wip.ifc.IHousingCleaningService
+                </Class>
+                <Class sourceFile="IHousingCleaningServicePea.java">
+                    com.company.abc.apps.wip.ifc.IHousingCleaningServicePea
+                </Class>
+                <Class sourceFile="IHousingToBeCleanedService.java">
+                    com.company.abc.apps.wip.ifc.IHousingToBeCleanedService
+                </Class>
+                <Class sourceFile="IHousingToBeCleanedServicePea.java">
+                    com.company.abc.apps.wip.ifc.IHousingToBeCleanedServicePea
+                </Class>
+                <Class sourceFile="IPubRelService.java">
+                    com.company.abc.apps.wip.ifc.IPubRelService
+                </Class>
+                <Class sourceFile="IPubRelServicePea.java">
+                    com.company.abc.apps.wip.ifc.IPubRelServicePea
+                </Class>
+                <Class sourceFile="IStorageCorrectionService.java">
+                    com.company.abc.apps.wip.ifc.IStorageCorrectionService
+                </Class>
+                <Class sourceFile="IStorageCorrectionServicePea.java">
+                    com.company.abc.apps.wip.ifc.IStorageCorrectionServicePea
+                </Class>
+                <Class sourceFile="IPrintSpeakerLabelService.java">
+                    com.company.abc.apps.wip.ifc.IPrintSpeakerLabelService
+                </Class>
+                <Class sourceFile="IPrintSpeakerLabelServicePea.java">
+                    com.company.abc.apps.wip.ifc.IPrintSpeakerLabelServicePea
+                </Class>
+                <Class sourceFile="ISpeakerScanSimulationService.java">
+                    com.company.abc.apps.wip.ifc.ISpeakerScanSimulationService
+                </Class>
+                <Class sourceFile="ISpeakerScanSimulationServicePea.java">
+                    com.company.abc.apps.wip.ifc.ISpeakerScanSimulationServicePea
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="BarcodeHelper.java">
+                    com.company.abc.apps.wip.ifc.BarcodeHelper
+                </Class>
+                <Class sourceFile="WIPConfiguration.java">
+                    com.company.abc.apps.wip.ifc.WIPConfiguration
+                </Class>
+                <Class sourceFile="WIPSignatures.java">
+                    com.company.abc.apps.wip.ifc.WIPSignatures
+                </Class>
+                <Class sourceFile="WorkCenterHelper.java">
+                    com.company.abc.apps.wip.ifc.WorkCenterHelper
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.corporation.compatibility.client</Package>
+                <Package>com.company.activity</Package>
+                <Package>com.company.compatibility.ui.objectbinderenhanced</Package>
+                <Package>com.company.abc.apps.wip.ifc.exception</Package>
+                <Package>com.company.abc.clientfw.general.ifc.helper</Package>
+                <Package>com.company.abc.clientfw.pec.ifc.helper</Package>
+                <Package>com.company.abc.general.basic.ifc</Package>
+                <Package>com.company.abc.general.basic.ifc.configuration</Package>
+                <Package>com.company.abc.general.basic.ifc.exceptions</Package>
+                <Package>com.company.abc.general.basic.ifc.plaza</Package>
+                <Package>com.company.abc.general.deviation.ifc</Package>
+                <Package>com.company.abc.plaza.eqm.ifc</Package>
+                <Package>com.company.abc.plaza.eqm.ifc.exceptions</Package>
+                <Package>com.company.abc.plaza.storage.ifc</Package>
+                <Package>com.company.abc.plaza.storage.ifc.exceptions</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.company.abc.apps.wip.impl</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.company.abc.apps.wip.ifc.exception">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>2</Ce>
+                <A>0</A>
+                <I>0.5</I>
+                <D>0.5</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="MESCommentTooLongException.java">
+                    com.company.abc.apps.wip.ifc.exception.MESCommentTooLongException
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.company.abc.general.basic.ifc.exceptions</Package>
+                <Package>java.lang</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.company.abc.apps.wip.ifc</Package>
+                <Package>com.company.abc.apps.wip.impl</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.company.abc.apps.wip.impl">
+            <Stats>
+                <TotalClasses>4</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>16</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="PubRelService.java">
+                    com.company.abc.apps.wip.impl.PubRelService
+                </Class>
+                <Class sourceFile="StorageCorrectionService.java">
+                    com.company.abc.apps.wip.impl.StorageCorrectionService
+                </Class>
+                <Class sourceFile="PrintSpeakerLabelService.java">
+                    com.company.abc.apps.wip.impl.PrintSpeakerLabelService
+                </Class>
+                <Class sourceFile="SpeakerScanSimulationService.java">
+                    com.company.abc.apps.wip.impl.SpeakerScanSimulationService
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.corporation.compatibility.client</Package>
+                <Package>com.company.activity</Package>
+                <Package>com.company.abc.apps.wip.ifc</Package>
+                <Package>com.company.abc.apps.wip.ifc.exception</Package>
+                <Package>com.company.abc.clientfw.pec.ifc.helper</Package>
+                <Package>com.company.abc.general.basic.ifc</Package>
+                <Package>com.company.abc.general.basic.ifc.configuration</Package>
+                <Package>com.company.abc.general.basic.ifc.exceptions</Package>
+                <Package>com.company.abc.general.basic.ifc.labeling</Package>
+                <Package>com.company.abc.general.basic.ifc.plaza</Package>
+                <Package>com.company.abc.general.deviation.ifc</Package>
+                <Package>com.company.abc.plaza.storage.ifc</Package>
+                <Package>com.company.abc.plaza.storage.ifc.exceptions</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+                <Package>org.apache.general.logging</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.company.abc.apps.wip.impl.activities">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>9</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Constants.java">
+                    com.company.abc.apps.wip.impl.activities.Constants
+                </Class>
+                <Class sourceFile="Generator.java">
+                    com.company.abc.apps.wip.impl.activities.Generator
+                </Class>
+                <Class sourceFile="UnprintedSpeakerActivity.java">
+                    com.company.abc.apps.wip.impl.activities.UnprintedSpeakerActivity
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.corporation.compatibility.client</Package>
+                <Package>com.corporation.compatibility.pnuts</Package>
+                <Package>com.company.activity</Package>
+                <Package>com.company.abc.clientfw.general.ifc.view</Package>
+                <Package>com.company.abc.general.basic.ifc.plaza</Package>
+                <Package>com.company.abc.general.basic.ifc.utility</Package>
+                <Package>com.company.abc.plaza.storage.ifc</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.company.abc.clientfw.general.ifc.helper">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.clientfw.general.ifc.view">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.clientfw.pec.ifc.helper">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.general.basic.ifc">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.general.basic.ifc.configuration">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.general.basic.ifc.exceptions">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.general.basic.ifc.labeling">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.general.basic.ifc.plaza">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.general.basic.ifc.utility">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.general.deviation.ifc">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.plaza.eqm.ifc">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.plaza.eqm.ifc.exceptions">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.plaza.storage.ifc">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.company.abc.plaza.storage.ifc.exceptions">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.apache.general.logging">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+    </Packages>
+
+    <Cycles>
+    </Cycles>
+</JDepend>
+
