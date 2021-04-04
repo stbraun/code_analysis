@@ -1,30 +1,21 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
 python:
-  - 3.7
-  - 3.8
-  - 3.9
-
+- 3.8
+- 3.9
 before_install:
-    - pip install --upgrade pip
-    - pip install pipenv
-    - pipenv install --dev
+- pip install --upgrade pip
+- pip install pipenv
+- pipenv install --dev
 install: skip
 script:
-    - pipenv run make lint
-    - pipenv run python setup.py test
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
+- pipenv run make lint
+- pipenv run python setup.py test
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: stbraun
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: iKA18t7hLD0b2km+GocmTXQ7UZW1QAHDXgghzA70ZzWwaqJxyby6USrB+CYm0NxDrGQDv/MmDAo7WKZj7zq9N8RXIsBznf/erylh3YoT7E6MOUwa2jZ3Z2KBf0iq/CQWgvorqiNTzuYiEEsUuhnrfaLxz5cTiSPFhihAuAvbm2w17rnnmGD3f1xbK8i+rC5IxxR+YptGuv0l2vdbpHg4oiuooGtdTkzaYMz/2bShRKSeqkfvE3bTjfvVp1U7vm+OoqYMLpfT01hR9NPBCvS6f/v1xd6z3+J5C1FKyCBXmfjvlWa/9MkrVW7Ssf6F98E9LmGZdwWNDZmQQvhYJSLizK3wSzB8dvWYAPKrrKtbW8cvFuvmUhfH4+GXGgvQJknYYNGhhqYn6C5TuC6OY5tqt1TSi5gCjOJJF9A0xMVObMjF5YLxFrOdo7Fd9+5EH9kzb4Wg6RdPQ47/pCpyQqSDnnLsmGYn4siNWJHIr2vapRxQSeJWiwQWqpHPFAyerXTdWT7hvY6AbIkrtgnHo9Cx8+A7rpchK3v/XW167hNXma47JgO4R5SKnqfLgCDhUgxgXf875rexRMPXqYS6mVglNo8PuXsO8i5pHKOMpnSmfBIAuhgAPWC7RnfkUr6zQvZ8E9+wsRWfvNwfW5uLRj+a1QV5a+AtbHOil9W1RRpAHfs=
   on:
     tags: true
     repo: stbraun/code_analysis
