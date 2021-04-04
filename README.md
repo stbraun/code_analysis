@@ -14,7 +14,7 @@ Run
 java_call_tree java_call_tree_input.txt > calltree-cypher.txt
 ```
 
-`calltree-cypher.txt`contains two Cypher statements, one to insert all classes into a Neo4j database, and another to insert the call relations on method level.
+`calltree-cypher.txt` contains two Cypher statements, one to insert all classes into a Neo4j database, and another to insert the call relations on method level.
 You can just copy each statement and paste it into the Neo4j browser.
 
 The database schema looks like this:
