@@ -30,26 +30,26 @@ class Stack:
     """Simple stack class."""
     def __init__(self):
         self._stack = []
-        
+
     def __len__(self):
         return len(self._stack)
-    
+
     def is_empty(self):
         return len(self._stack) == 0
 
     def push(self, item):
         self._stack.append(item)
-    
+
     def multi_push(self, items):
         for item in items:
             self.push(item)
-        
+
     def pop(self):
         return self._stack.pop()
 
     def top(self):
         return '' if self.is_empty() else self._stack[-1]
-    
+
     def __repr__(self):
         repr = ("Stack:\n")
         for item in self._stack[::-1]:
@@ -61,7 +61,7 @@ class PackageStack(Stack):
     """Package hierarchy."""
     def __init__(self):
         Stack.__init__(self)
-        
+
     def package_hierarchy(self):
         return '.'.join(self._stack)
 
@@ -105,7 +105,7 @@ def walk_hierarchy(path_to_package: Path):
             process_node(folder)
             if is_package(folder.glob('*')):
                 packages_stack.pop()
-    
+
     process_node(path_to_package)
     return mapping, packages_stack
 
@@ -156,9 +156,9 @@ def prepare_dependencies(mapping):
 def main(package_path):
     mapping, package_stack = walk_hierarchy(Path(package_path))
     prepare_package_module_dependencies(mapping, package_stack.top())
-    prepare_dependencies(mapping) 
-    
+    prepare_dependencies(mapping)
+    return 0
+
 
 if __name__ == '__main__':
-    sys.exit(main()) # pylint: disable=no-value-for-parameter
-
+    sys.exit(main())  # pylint: disable=no-value-for-parameter

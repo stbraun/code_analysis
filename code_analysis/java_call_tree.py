@@ -89,7 +89,7 @@ def generate_with_statement(file_name: str):
         class_tuples = []
         method_tuples = []
         for line in fd.readlines():
-            try:    
+            try:
                 line = line.strip()
                 source, target = line.split(" ")
                 if is_method(source):
@@ -111,4 +111,3 @@ def generate_with_statement(file_name: str):
 
 if __name__ == '__main__':
     generate_with_statement()  # pylint: disable=no-value-for-parameter
-

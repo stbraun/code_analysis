@@ -25,7 +25,7 @@ def extract_dependencies(dependency_file):
 
 def prepare_packages(mapping):
     """Generate a node for each package.
-    
+
     For dependend packages no node will be generated because this will happen when generating relations.
     Here we generate nodes only because packages without dependencies would get lost.
     """
@@ -75,5 +75,4 @@ def main(dependency_file):
 
 
 if __name__ == '__main__':
-    sys.exit(main()) # pylint: disable=no-value-for-parameter
- 
+    sys.exit(main())  # pylint: disable=no-value-for-parameter
