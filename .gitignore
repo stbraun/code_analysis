@@ -116,5 +116,5 @@ dmypy.json
 # General
 *.*~
 **/*.swp
-**/*.py.swp
 
+code_analysis/tags

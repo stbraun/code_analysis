@@ -49,3 +49,21 @@ RETURN p, q, r1, r2
 ```
 
 It helps to switch off the default setting, which shows all relations, in the browser settings.
+
+## Generating Cypher code for Python dependencies
+
+Determination of dependencies and generation of Cypher code are done in one step in this case:
+
+```
+python_dependencies <path to your package> > python-deps.cypher
+```
+
+The tool compiles the code and walks the AST looking for import statements. Then it generates Cypher code modelling the relationships between the packages.
+
+The database schema looks like this:
+
+```
+(:Package)-[:contains]->(:Module) 
+(:Module)-[:uses]->(:Module)
+```
+
