@@ -39,7 +39,7 @@ Generating Cypher for a Java call tree
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Create the call tree using java-callgraph and save it into a file, e.g., `java_call_tree_input.txt`.
-Run 
+Run::
 
 
     java_call_tree java_call_tree_input.txt > calltree-cypher.txt
@@ -47,7 +47,7 @@ Run
 
 `calltree-cypher.txt` contains two Cypher statements, one to insert all classes into a Neo4j database, and another to insert the call relations on method level. You can just copy each statement and paste it into the Neo4j browser.
 
-The database schema looks like this:
+The database schema looks like this:::
 
 
     (:Class)-[:uses]->(:Class)
@@ -59,7 +59,7 @@ Generating Cypher code for Java dependencies
 
 Create dependencies using JDepend and save it in a file, e.g., `java_depend.txt`.
 
-Run following command:
+Run following command:::
 
 
     java_dependencies java_depend.txt > java_depend.cypher
@@ -67,13 +67,13 @@ Run following command:
 
 Now you can copy the Cypher statements stored in `java_depend.cypher` and paste it into the Neo4j browser.
 
-The database schema looks like this:
+The database schema looks like this:::
 
 
     (:Package)-[:depends_on]->(:Package)
 
 
-To check for cycles you may run the query:
+To check for cycles you may run the query:::
 
 
     MATCH (p:Package)-[r1:depends_on]->(q:Package)-[r2:depends_on]->(p:Package)
@@ -85,7 +85,7 @@ It helps to switch off the default setting, which shows all relations, in the br
 Generating Cypher code for Python dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Determination of dependencies and generation of Cypher code are done in one step in this case:
+Determination of dependencies and generation of Cypher code are done in one step in this case:::
 
 
     python_dependencies <path to your package> > python-deps.cypher
@@ -93,7 +93,7 @@ Determination of dependencies and generation of Cypher code are done in one step
 
 The tool compiles the code and walks the AST looking for import statements. Then it generates Cypher code modelling the relationships between the packages.
 
-The database schema looks like this:
+The database schema looks like this:::
 
 
     (:Package)-[:contains]->(:Module) 
