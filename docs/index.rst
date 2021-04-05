@@ -1,5 +1,5 @@
 Welcome to code_analysis's documentation!
-======================================
+=========================================
 
 .. toctree::
    :maxdepth: 2
@@ -8,6 +8,7 @@ Welcome to code_analysis's documentation!
    readme
    installation
    usage
+   technical specification
    modules
    contributing
    history
