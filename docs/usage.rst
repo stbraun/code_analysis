@@ -21,7 +21,7 @@ java_dependencies
 First generate a dependency file with JDepend. You can download it from GitHub: https://github.com/clarkware/jdepend.
 Then feed the output into `java_dependencies`:::
 
-    java jdepend.xmlui.JDepend -f jdepend_output.txt <path to Java project> 
+    java jdepend.xmlui.JDepend -file jdepend_output.txt <path to Java project> 
     java_dependencies jdepend_output.txt > dependency.cypher
 
 Now paste the content of `dependency.cypher` into the Neo4j browser to import your dependencies.
