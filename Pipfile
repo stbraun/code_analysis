@@ -11,11 +11,10 @@ sphinx = "*"
 twine = "*"
 bump2version = "*"
 nox = "*"
-
 pytest = "*"
 pytest-runner = "*"
 pytest-watch = "*"
-
+bumpversion = "*"
 
 [packages]
 
