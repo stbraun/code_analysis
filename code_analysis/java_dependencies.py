@@ -1,4 +1,11 @@
-"""Generate Cypher code from JDepend output for analysis of Java package dependencies."""
+"""
+    Generate Cypher code from JDepend output.
+
+    This code can be run in Neo4j to import dependencies. Then all the analysis
+    capabilities of Neo4j are available for analysis of Java package
+    dependencies, e.g., cycles between packages or projects, or methods
+    calling many other methods or are called by many other methods.
+"""
 
 import sys
 import xml.etree.ElementTree as ET
@@ -26,8 +33,9 @@ def extract_dependencies(dependency_file):
 def prepare_packages(mapping):
     """Generate a node for each package.
 
-    For dependend packages no node will be generated because this will happen when generating relations.
-    Here we generate nodes only because packages without dependencies would get lost.
+    For dependend packages no node will be generated because this will happen
+    when generating relations. Here we generate nodes only because packages
+    without dependencies would get lost.
     """
     print("WITH [")
     skip_first = True
@@ -69,6 +77,7 @@ def prepare_dependencies(mapping):
 @click.command()
 @click.argument("dependency_file")
 def main(dependency_file):
+    """Script entry point."""
     mapping = extract_dependencies(dependency_file)
     prepare_packages(mapping)
     prepare_dependencies(mapping)
